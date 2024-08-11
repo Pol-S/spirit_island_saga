@@ -1,0 +1,49 @@
+CLI for now? Frontend maybe later.
+
+What format is SICK in? Can you get a json? Tabletop Simulator? You will need to use that format.
+
+1st step is about modeling the data shape?
+
+Consideration for superlatives and a "big" change in board state (need to define big and knowledge of board state)
+
+The art of describing Ravages could be its own thing. Most changes to game state happen then. (Dahan fighting back too.)
+
+Piece of data needed for a turn:
+I. Card/Spirit Board
+II. Presence
+III. Board pieces (Letter and numbers) (Land types? Could talk about growth options)
+IV. Fear
+V. Blight
+VI. Invader Deck
+VII. Other Tokens (Beast/Wilds/Disease/Etc.)
+
+
+Assume Json file for now, worry about details later
+
+Parse vs. Validate
+Validation is asking a question of something you already have, and rejecting if its not in the right shape
+Parsing is the act of insuring creation of correct data shapes
+
+Starting out: Get a card, put out a prose description.
+Anatomy of a Spirit Card:
+Name
+Speed
+Range
+Target
+Energy Cost
+Elements Granted
+Card type (Minor/Major/Innate)
+Effect
+    (Parsers?)
+(Thresholds/Choices)
+(Unique to Spirit vs. general pool)
+
+* Given a json files that contains cards, can select a card and have it produce a prose output
+
+* Output includes the Name
+* Output includes the Speed
+* Output includes the Range
+* Output includes the Target
+* Output includes the Energy Cost
+* Output includes the Elements Granted
+* Output includes the Effect
