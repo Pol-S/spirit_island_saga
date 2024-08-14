@@ -8,7 +8,6 @@ class Card
                 :effect, 
                 :type
 
-
   def initialize(name:, speed:, range:, target:, cost:, elements:, effect:, type:)
     self.name = name
     self.speed = speed
