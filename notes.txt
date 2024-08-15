@@ -47,3 +47,26 @@ Effect
 * Output includes the Energy Cost
 * Output includes the Elements Granted
 * Output includes the Effect
+
+The anatomy of a power use into prose, bare bones
+
+Spirit, Invader, Power Being Used, Land, Results?
+
+Spirit{ name: name}
+Invader{ name: name}
+Power{ done already}
+Land{ type: type}
+
+I will want string concatenation and multiple scripts
+
+So the data will go into a power concatenator that refers to multiple scripts, probably at random, and then back to the concatenator and then back out.
+
+The data needs to be turned into prose. Every power will have to a prose translator? Or a generic prose translator.
+
+A simple script could be
+
+“#{spirit} does #{effect}, against #{invaders} at #{land}”
+
+Eventually I will need a “significance” metric.
+
+What makes a good saga? What makes a good summary?
