@@ -73,7 +73,7 @@ describe "prose" do
     # give spirit card name, will output a prose output
     output = prose.retrieve("Unexpected Tigers")
     # output includes the expected power effect
-    expect(output).to match /"1 Fear if Invaders are present. If you can gather 1 Beasts, do so, then push 1 Explorer. Otherwise, add 1 Beasts."/
+    expect(output).to match /1 Fear if Invaders are present. If you can gather 1 Beasts, do so, then push 1 Explorer. Otherwise, add 1 Beasts./
   end
 
   it "Output includes the card type" do
@@ -82,8 +82,16 @@ describe "prose" do
     # give spirit card name, will output a prose output
     output = prose.retrieve("Unexpected Tigers")
     # output includes the expected power type
-    expect(output).to match /"innate"/
+    expect(output).to match /innate/
   end
 
+  it "Output includes the Spirit" do
+    # create a new instance of program
+    prose = Prose.new 
+    # give spirit name, will output a prose output
+    output = prose.spirit("Grinning Trickster Stirs Up Trouble")
+    # output includes the expected spirit
+    expect(output).to match /Grinning Trickster Stirs Up Trouble/
+  end
 
 end
