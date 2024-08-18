@@ -85,13 +85,22 @@ describe "prose" do
     expect(output).to match /innate/
   end
 
-  it "Output includes the Spirit" do
+  it "Given a json files that contains spirits, can select a spirit and have it produce a prose output" do
     # create a new instance of program
     prose = Prose.new 
     # give spirit name, will output a prose output
     output = prose.spirit("Grinning Trickster Stirs Up Trouble")
     # output includes the expected spirit
     expect(output).to match /Grinning Trickster Stirs Up Trouble/
+  end
+
+  it "Given a json files that contains invaders, can select an invader and have it produce a prose output" do
+    # create a new instance of program
+    prose = Prose.new 
+    # give spirit name, will output a prose output
+    output = prose.invader("England")
+    # output includes the expected spirit
+    expect(output).to match /England/
   end
 
 end

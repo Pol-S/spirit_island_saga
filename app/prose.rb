@@ -2,6 +2,7 @@ require "oj"
 require "pry"
 require_relative "card"
 require_relative "spirit"
+require_relative "invader"
 
 class Prose
   def retrieve(card_name)
@@ -16,5 +17,12 @@ class Prose
     spirit_hash = Oj.load(spirits, {symbol_keys: true})
     spirit = Spirit.new(**spirit_hash)
     spirit.to_s
+  end
+
+  def invader(invader_name)
+    invaders = File.read("./invaders.json")
+    invader_hash = Oj.load(invaders, {symbol_keys: true})
+    invader = Invader.new(**invader_hash)
+    invader.to_s
   end
 end
