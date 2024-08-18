@@ -1,4 +1,8 @@
+require "oj"
+require_relative "fetch"
+
 class Invader
+  extend Fetch
   attr_accessor :name
 
   def initialize(name: )

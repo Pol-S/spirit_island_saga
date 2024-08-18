@@ -1,4 +1,8 @@
+require "oj"
+require_relative "fetch"
+
 class Spirit
+  extend Fetch
   attr_accessor :name
 
   def initialize(name:)

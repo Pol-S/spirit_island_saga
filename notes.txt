@@ -24,7 +24,7 @@ Parse vs. Validate
 Validation is asking a question of something you already have, and rejecting if its not in the right shape
 Parsing is the act of insuring creation of correct data shapes
 
-Starting out: Get a card, put out a prose description.
+Starting out: Get a card, put out a saga description.
 Anatomy of a Spirit Card:
 Name
 Speed
@@ -38,7 +38,7 @@ Effect
 (Thresholds/Choices)
 (Unique to Spirit vs. general pool)
 
-* Given a json files that contains cards, can select a card and have it produce a prose output
+* Given a json files that contains cards, can select a card and have it produce a saga output
 
 * Output includes the Name
 * Output includes the Speed
@@ -48,7 +48,7 @@ Effect
 * Output includes the Elements Granted
 * Output includes the Effect
 
-The anatomy of a power use into prose, bare bones
+The anatomy of a power use into saga, bare bones
 
 Spirit, Invader, Power Being Used, Land, Results?
 
@@ -61,7 +61,7 @@ I will want string concatenation and multiple scripts
 
 So the data will go into a power concatenator that refers to multiple scripts, probably at random, and then back to the concatenator and then back out.
 
-The data needs to be turned into prose. Every power will have to a prose translator? Or a generic prose translator.
+The data needs to be turned into saga. Every power will have to a saga translator? Or a generic saga translator.
 
 A simple script could be
 
@@ -70,3 +70,14 @@ A simple script could be
 Eventually I will need a “significance” metric.
 
 What makes a good saga? What makes a good summary?
+
+Playing around with unit size. Will the saga have smaller components of pargraphs/sentences?
+
+Testing randomness:
+    Don't use the rand method for cryptographic functions. It gets seeds and if seeds are re-used they get the same thing back.
+
+    pre-seed is an option, look to the "srand" method
+
+Use inheritence when the children have the exact public methods repeated. Exact being key word here, reconsider if there are a couple public methods not shared.
+
+Look up the difference between classes and modules again. The finer points, specifically. Extends says I want these to be class methods, Includes is for instance methods. Remember, you can only inherit from one thing at a time.

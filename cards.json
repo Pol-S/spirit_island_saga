@@ -1,14 +1,16 @@
 {
-    "type": "innate",
-    "name": "Unexpected Tigers",
-    "speed": "slow",
-    "range": "1",
-    "target": "any",
-    "cost": 0,
-    "elements": [
-        "moon", 
-        "fire", 
-        "animal"
-    ],
-    "effect": "1 Fear if Invaders are present. If you can gather 1 Beasts, do so, then push 1 Explorer. Otherwise, add 1 Beasts."    
+    "Unexpected Tigers": {
+        "type": "innate",
+        "name": "Unexpected Tigers",
+        "speed": "slow",
+        "range": "1",
+        "target": "any",
+        "cost": 0,
+        "elements": [
+            "moon", 
+            "fire", 
+            "animal"
+        ],
+        "effect": "1 Fear if Invaders are present. If you can gather 1 Beasts, do so, then push 1 Explorer. Otherwise, add 1 Beasts."    
+    }
 }

@@ -1,4 +1,8 @@
+require "oj"
+require_relative "fetch"
+
 class Card
+  extend Fetch
   attr_accessor :name, 
                 :speed, 
                 :range, 
