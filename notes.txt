@@ -81,3 +81,7 @@ Testing randomness:
 Use inheritence when the children have the exact public methods repeated. Exact being key word here, reconsider if there are a couple public methods not shared.
 
 Look up the difference between classes and modules again. The finer points, specifically. Extends says I want these to be class methods, Includes is for instance methods. Remember, you can only inherit from one thing at a time.
+
+Using Unexpected Tigers as an example with Grinning Trickster, I'd imagine something like this:
+
+With its presence in the western wetlands [land], Grinning Trickster Stirs Up Trouble [spirit name] effortlessly [0 energy] called forth Unexpected Tigers [card name] upon the neighboring [1 range] mountains, gathering the power of the moon, of fire, and of animals [elements] and invoking anxiety [1 fear] within the explorers [land contents] there. From the neighboring jungle, the beasts roamed in, driving a few explorers out back to the nearby wetlands. 
