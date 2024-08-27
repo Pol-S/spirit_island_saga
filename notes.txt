@@ -85,3 +85,11 @@ Look up the difference between classes and modules again. The finer points, spec
 Using Unexpected Tigers as an example with Grinning Trickster, I'd imagine something like this:
 
 With its presence in the western wetlands [land], Grinning Trickster Stirs Up Trouble [spirit name] effortlessly [0 energy] called forth Unexpected Tigers [card name] upon the neighboring [1 range] mountains, gathering the power of the moon, of fire, and of animals [elements] and invoking anxiety [1 fear] within the explorers [land contents] there. From the neighboring jungle, the beasts roamed in, driving a few explorers out back to the nearby wetlands. 
+
+when to case and when to if: 
+Use Case if the thing you are pushing on is the same shape/type
+
+Use If if the condition can vary arbitrarily 
+
+Move if then statements out of work level and into creation
+Read up on Polymorphism 

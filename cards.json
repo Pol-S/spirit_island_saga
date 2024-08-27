@@ -9,7 +9,7 @@
         "elements": [
             "moon", 
             "fire", 
-            "animal"
+            "animals"
         ],
         "effect": "1 Fear if Invaders are present. If you can gather 1 Beasts, do so, then push 1 Explorer. Otherwise, add 1 Beasts."    
     }
