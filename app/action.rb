@@ -2,6 +2,8 @@ require_relative "card"
 require_relative "spirit"
 require_relative "invader"
 require_relative "element"
+require_relative "range"
+require_relative "effect"
 
 class Action
   attr_accessor :action
@@ -28,13 +30,7 @@ class Action
   end
   
   def interpret_range
-    range_scale = {
-       "0" => "immediate",
-       "1" => "neighboring",
-       "2" => "further off",
-       "3" => "distant"
-    }
-    range_scale[action.range]
+    range = "#{Range.to_s(action.range)}"
   end
 
   def list_elements
@@ -49,9 +45,13 @@ class Action
     end
   end
 
+  def interpret_effect
+    effect = "#{Effect.to_s(action.effect)}"
+  end
+
   def to_s
     <<~ACTION
-    "With its presence in the western wetlands, Grinning Trickster Stirs Up Trouble #{interpret_cost} called forth #{action.name} upon the #{interpret_range} mountains, gathering the power #{list_elements} and #{action.effect}"
+    "With its presence in the western wetlands, Grinning Trickster Stirs Up Trouble #{interpret_cost} called forth #{action.name} upon the #{interpret_range} mountains, gathering the power #{list_elements} and #{interpret_effect}"
     ACTION
   end
 end

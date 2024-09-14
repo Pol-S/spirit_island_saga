@@ -63,7 +63,7 @@ describe "saga" do
     # give spirit card name, will output a saga output
     output = saga.card("Unexpected Tigers")
     # output includes the expected elements granted
-    expect(output).to match /"moon", "fire", "animal"/
+    expect(output).to match /"moon", "fire", "animals"/
   end
   
 

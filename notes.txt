@@ -93,3 +93,13 @@ Use If if the condition can vary arbitrarily
 
 Move if then statements out of work level and into creation
 Read up on Polymorphism 
+
+8/26/24
+
+So instead of getting ahead of ourselves on the spreadsheets about Card effects, we instead focused on just elements. Good lesson what could be called Polymorphism. About moving checking data types out of logics and into class creation. If then statements really need to be re-evaluated. The fact that Card Elements are a closed set (sun, moon, fire, water, air, earth, plant, animals) helps with assumptions. Also don’t take it for granted what it takes to get simple strings presentable to an audience. Have more care in this.
+
+Right now, I need to get past copying patterns and understanding adroitly shaped classes
+
+9/4/24
+
+Okay I think I'm just going to make a naively formed card effect first and then worry about non-standard effects later. Also, what do I even want the prose for player-to-player support to look like? How should 'Drawing more minor powers' or 'Repeat lowest cost card' look like in prose?
