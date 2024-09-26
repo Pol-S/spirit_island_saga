@@ -103,3 +103,14 @@ Right now, I need to get past copying patterns and understanding adroitly shaped
 9/4/24
 
 Okay I think I'm just going to make a naively formed card effect first and then worry about non-standard effects later. Also, what do I even want the prose for player-to-player support to look like? How should 'Drawing more minor powers' or 'Repeat lowest cost card' look like in prose?
+
+9/15/24
+Look up Null Object pattern
+
+regarding effect.to_s
+
+move effect data to initialize, need to save state. So you aren't constantly calling methods just to check if things exist. avoid a service class.
+
+blah.methods.sort - Object.methods
+
+next steps: extract multiple sets of tokens/matches from effect string

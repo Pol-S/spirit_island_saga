@@ -6,10 +6,11 @@ require_relative "range"
 require_relative "effect"
 
 class Action
-  attr_accessor :action
+  attr_accessor :action, :effect
 
   def initialize(action)
     self.action = Card.fetch(name: action)
+    self.effect = Effect.new(self.action.effect)
   end
   
   #these will not stay here
@@ -46,7 +47,7 @@ class Action
   end
 
   def interpret_effect
-    effect = "#{Effect.to_s(action.effect)}"
+    self.effect.to_s
   end
 
   def to_s
