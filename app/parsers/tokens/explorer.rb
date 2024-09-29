@@ -2,21 +2,21 @@ require_relative "../token"
 
 module Parser
   class Explorer < Token
-    def sentence
-      sentence = []
-      #I know it's ugly and incomplete, won't stay
+    def prose
+      phrase = []
+      #add other amounts and movement types
       case amount
       when "1"
-        sentence << "a few explorers"
+        phrase << "a few explorers"
       end
 
       case movement
       when "push"
-        sentence.unshift("driving")
-        sentence << "out"
+        phrase.unshift("driving")
+        phrase << "out back to the nearby wetlands"
       end
 
-      sentence.join(" ")
+      phrase.join(" ")
     end
   end
 end

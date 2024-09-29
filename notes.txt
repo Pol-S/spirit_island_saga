@@ -114,3 +114,17 @@ move effect data to initialize, need to save state. So you aren't constantly cal
 blah.methods.sort - Object.methods
 
 next steps: extract multiple sets of tokens/matches from effect string
+
+9/29/24
+
+In tokens class, note new short hand
+
+    def self.prose(tokens)
+      tokens.map(&:phrase)
+    end
+
+The block (&:phrase) is looking first arg and calling method phrase. & is the "to_proc" operator.
+
+token will need land information. List of movement type, amount, lands involved. Lands involved can vary. SHould I be looking for movement instead.
+
+Gather and push should both be arrays of token information, it's just more obvious with gather

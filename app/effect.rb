@@ -12,16 +12,9 @@ class Effect
     self.tokens = Parser::Token.for(self.effect_string)    
   end
 
-  def token_movement
-    [
-      "the beasts roamed in", 
-      "driving a few explorers out back to the nearby wetlands",
-    ]
-  end
-
       #goal: "invoking anxiety within the explorers there. From the neighboring jungle, the beasts roamed in, driving a few explorers out back to the nearby wetlands."
   
   def to_s
-    "#{fear.prose} within the explorers there. From the neighboring jungle, #{token_movement[0]}, #{token_movement[1]}"
+    "#{fear.prose} within the explorers there. From the #{tokens[0].prose}, #{tokens[1].prose}"
   end
 end

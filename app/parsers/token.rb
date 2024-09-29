@@ -1,38 +1,31 @@
 module Parser
   class Token
-    attr_accessor :movement, :amount
+    attr_accessor :movement, :amount, :source_land, :destination_land
 
     MOVEMENT_KEYWORDS = %w[ 
       gather
       push
     ]
 
-    def self.for(effect_string)
+    def self.for(effect_string, source_land, destination_land)
       data = effect_string.scan(self.data_pattern)
       data.map do |piece|
         Parser.const_get(piece[2]).new(
           piece[0],
           piece[1]
         )
-      end     
+      end
     end
 
     def self.data_pattern
       /(?<movement>#{MOVEMENT_KEYWORDS.join("|")}) (?<amount>\d*) (?<type>\w*)/
     end
 
-    def initialize(movement, amount)
+    def initialize(movement, amount, source_land, destination_land)
       self.movement = movement
       self.amount = amount
-    end
-
-    #goal:     [
-    #   "the beasts roamed in", 
-    #   "driving a few explorers out back to the nearby wetlands",
-    # ]
-
-    def self.prose(token_arr)
-      
+      self.source_land = source_land
+      self.destination_land = destination_land
     end
   end
 end
