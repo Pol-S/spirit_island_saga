@@ -12,7 +12,7 @@ module Parser
 
       case movement
       when "gather"
-        phrase.unshift("neighboring jungle,")
+        phrase.unshift("neighboring #{lands[0]},")
         phrase << "roamed in"
       end
 

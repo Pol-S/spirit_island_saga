@@ -6,11 +6,12 @@ require_relative "range"
 require_relative "effect"
 
 class Action
-  attr_accessor :action, :effect
+  attr_accessor :action, :effect, :lands
 
-  def initialize(action)
+  def initialize(action, lands)
     self.action = Card.fetch(name: action)
-    self.effect = Effect.new(self.action.effect)
+    self.effect = Effect.new(self.action.effect, lands)
+    self.lands = lands
   end
   
   #these will not stay here

@@ -127,4 +127,16 @@ The block (&:phrase) is looking first arg and calling method phrase. & is the "t
 
 token will need land information. List of movement type, amount, lands involved. Lands involved can vary. SHould I be looking for movement instead.
 
-Gather and push should both be arrays of token information, it's just more obvious with gather
+Gather and push should both be arrays of token information, it's just more obvious with gather.
+
+I briefly entertained if I would start using an board-state change approach that would be power/card agnostic. (“I don’t care what ability was used. Just give me more what changed, what pieces moved, what player resources changed.”) This would be opposed to referencing what is in the text of an ability and the further information required (“Okay, tell me ability used, but you need to give me targets, be they land or other players.”) In the end, because this is based off of taste, I’m going with the latter because it gives me more chance to be expressive.
+
+10/2/24
+
+So I think I need a catch all, "Round Information" packet of some sort.
+
+10/6/24
+
+Consider a game state class to save the state. Pragmatically we want something to initialize the board to begin with. 
+
+This all started because I now need round information and that implies a game state so that tracks. Round information probably will just align with the change in game state.
