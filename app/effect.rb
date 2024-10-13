@@ -16,6 +16,6 @@ class Effect
       #goal: "invoking anxiety within the explorers there. From the neighboring jungle, the beasts roamed in, driving a few explorers out back to the nearby wetlands."
   
   def to_s
-    "#{fear.prose} within the explorers there. From the #{tokens[0].prose}, #{tokens[1].prose}"
+    "#{fear.prose} within the explorers there. From the #{tokens[0].to_s}, #{tokens[1].to_s}"
   end
 end

@@ -32,7 +32,7 @@ class Action
   end
   
   def interpret_range
-    range = "#{Range.to_s(action.range)}"
+    range = "#{Range.to_s(action.range, lands)}"
   end
 
   def list_elements
@@ -53,7 +53,7 @@ class Action
 
   def to_s
     <<~ACTION
-    "With its presence in the western wetlands, Grinning Trickster Stirs Up Trouble #{interpret_cost} called forth #{action.name} upon the #{interpret_range} mountains, gathering the power #{list_elements} and #{interpret_effect}"
+    "With its presence in the western wetlands, Grinning Trickster Stirs Up Trouble #{interpret_cost} called forth #{action.name} upon the #{interpret_range}, gathering the power #{list_elements} and #{interpret_effect}"
     ACTION
   end
 end

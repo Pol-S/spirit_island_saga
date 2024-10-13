@@ -94,6 +94,14 @@ describe "saga" do
     expect(output).to match /Grinning Trickster Stirs Up Trouble/
   end
 
+  it "Given a json files that contains spirits and round information, can select a spirit and have return it's locations" do
+    # create a new instance of program
+    saga = Saga.new("A")  
+    # give spirit name and location, will output a saga output
+    output = saga.spirit("Grinning Trickster Stirs Up Trouble")
+
+  end
+
   it "Given a json files that contains invaders, can select an invader and have it produce a saga output" do
     # create a new instance of program
     saga = Saga.new("A")  
@@ -121,7 +129,7 @@ describe "saga" do
     #create a new instance of program
     saga = Saga.new("A") 
     #give card, spirit and invader, will output a sentence
-    output = saga.action("Unexpected Tigers", [1, 2])
+    output = saga.action("Unexpected Tigers", [saga.land("1"), saga.land("3")])
     #output should contain expected information 
     expect(output).to match /With its presence in the western wetlands, Grinning Trickster Stirs Up Trouble effortlessly called forth Unexpected Tigers upon the neighboring mountains, gathering the power of the moon, of fire, and of animals and invoking anxiety within the explorers there. From the neighboring jungle, the beasts roamed in, driving a few explorers out back to the nearby wetlands./
   end

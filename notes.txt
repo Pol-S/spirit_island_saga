@@ -140,3 +140,9 @@ So I think I need a catch all, "Round Information" packet of some sort.
 Consider a game state class to save the state. Pragmatically we want something to initialize the board to begin with. 
 
 This all started because I now need round information and that implies a game state so that tracks. Round information probably will just align with the change in game state.
+
+10/13/24
+
+So I will want location for spirits a lot of times for decription, so I'm wondering when and how this will eventually turn into just generic "round information". I'm just going to let it develop organically.
+
+Also, I want to implement a larger selection of sentence structures. Have to remind myself how to test for randomness and in randomness. 
