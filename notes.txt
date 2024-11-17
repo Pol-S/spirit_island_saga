@@ -146,3 +146,35 @@ This all started because I now need round information and that implies a game st
 So I will want location for spirits a lot of times for decription, so I'm wondering when and how this will eventually turn into just generic "round information". I'm just going to let it develop organically.
 
 Also, I want to implement a larger selection of sentence structures. Have to remind myself how to test for randomness and in randomness. 
+
+Wait, crap, can an action have more than one Presence involved? Do I need locations plural, or a single location. 
+
+10/20/24
+
+Okay, pulling back on locations, will need to track the location of presence elsewhere. Right now it seems like a general game_state class seems like the better option. Right now I've just hard coded the value of presence location into the class under Parser and that isn't right.
+
+The token class itself might need to be expand (or possibly renamed into movement.)
+
+Let's think, what do we want on out of game_state at minimum. Currently, I want to a running log of where tokens are located. This should include creation and destruction as well as movement, because creation and destruction is potentially very cool and evocative prose to write that can be customized per spirit:
+
+ "Starlights new presence blossomed from many interesecting lines of potentiality"
+
+ "Smug, faint cackling could be heard from the jungle as Grinning Trickster established a new presence in the jungle."
+
+ "Slow, coiling, primal magic wrapped itself into a new point of presence at Serpent's behest"
+
+Anyway, game_state should also keep track of token type. Location and type at the very least means it needs access to the board and lands
+
+From Ben: game_state should probably be a singleton, should read up on that.
+
+Starting off I'm just confining myself to just presence. game_state definitely will need to concern itself with the other tokens. All the tokens, in fact. But let's get this working first.
+
+You don't need an initialize with singletons,, nor should you have to ever spin one up with a .new. You should just have access to it.
+
+Look to the self.save method and the GameState.save examples to just get more used to this slightly different syntax. 
+
+GameState sounds like it should be a big hash that holds all the lands and the lands have a space for the temp tokens that are currently held there.
+
+Current to_do:
+get game_state class useful
+

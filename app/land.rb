@@ -3,12 +3,14 @@ require_relative "fetch"
 
 class Land
   extend Fetch
-  attr_accessor :terrain, 
+  attr_accessor :name,
+                :terrain, 
                 :adjancencies, 
                 :coastal, 
                 :tokens
 
-  def initialize(terrain:, adjancencies:, coastal:, tokens:)
+  def initialize(name:, terrain:, adjancencies:, coastal:, tokens:)
+    self.name
     self.terrain = terrain
     self.adjancencies = adjancencies
     self.coastal = coastal
@@ -17,6 +19,7 @@ class Land
 
   def to_s
     <<~LAND
+      #{name}
       #{terrain}
       #{adjancencies}
       #{coastal}
