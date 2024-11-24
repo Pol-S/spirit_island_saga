@@ -10,8 +10,11 @@ class GameState
   end
 
   def self.save_presence(board, land, spirit)
-    #make the empty [:tokens] array here instead of json
-    instance.boards[board].lands[land.to_sym][:tokens] << spirit
+    target_land = instance.boards.select { |board_names| board_names.has_key?(board) }.first[board].lands[land.to_sym]
+    unless target_land.has_key?(:tokens)
+      target_land.merge!( { :tokens => [] } )
+    end
+    target_land[:tokens] << spirit
   end
 
   def self.delete_presence(lands, spirit)
